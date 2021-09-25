@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Playlist</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script>
+        function PlayButton(currentList) {
+            //current list digunakan untuk menyimpan
+            //audio yang saat ini diputar
+
+            let musics = document.getElementsByTagName("Lagu");
+            for(let index = 0; index < musics.length; index++){
+                if(musics[index] !== currentList){
+                    musics[index].pause();
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!--card header-->
+            <div class="card-header bg-warning">
+                <h3 class="text-white text-center">PLAYLIST</h3>
+            </div>    
+            <!--card body-->
+            <div class="card-body">
+                <ul class="list-group">
+                    <!--list pertama-->
+                    <li class="list-group-item"> 
+                        <div class="row">
+                            <!--div untuk gambar-->
+                            <div class="col-lg-4 col-md-6">
+                                <img src="Photo/22080b1b7d184b27b38b8c85a061f41c014.jpg" 
+                                width="200" height="200"/>
+                            </div>
+                            <!--div untuk judul dan music control-->
+                            <div class="col-lg-8 col-md-10">
+                                <h5 class="text-dark">
+                                    Nemuri Hime-Sekai No Owari
+                                </h5>
+                                <audio src="Lagu/9convert.com - Nemuri Hime.mp3"
+                                controls onplay="PlayButton(this)">
+                                <audio>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item"> 
+                        <div class="row">
+                            <!--div untuk gambar-->
+                            <div class="col-lg-4 col-md-6">
+                                <img src="Photo/3bfbc4b6082f43a9b97cc99cada7c01b100.jpg" 
+                                width="200" height="200"/>
+                            </div>
+                            <!--div untuk judul dan music control-->
+                            <div class="col-lg-8 col-md-10">
+                                <h5 class="text-dark">
+                                    Body Back-Gryffin
+                                </h5>
+                                <audio src="Lagu/Gryffin  Body Back ft Maia Wright Official Music Video.mp3"
+                                controls onplay="PlayButton(this)">
+                                <audio>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item"> 
+                        <div class="row">
+                            <!--div untuk gambar-->
+                            <div class="col-lg-4 col-md-6">
+                                <img src="Photo/5f07e41870ed4b72a02949ac19d6b9de319.jpg" 
+                                width="200" height="200"/>
+                            </div>
+                            <!--div untuk judul dan music control-->
+                            <div class="col-lg-8 col-md-10">
+                                <h5 class="text-dark">
+                                    Tie Me Down - Gryffin
+                                </h5>
+                                <audio src="Lagu/Gryffin with Elley Duh  Tie Me Down Lifestyle Video.mp3"
+                                controls onplay="PlayButton(this)">
+                                <audio>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>
